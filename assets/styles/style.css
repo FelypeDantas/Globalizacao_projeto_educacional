@@ -1,0 +1,184 @@
+body {
+  --bege: #E6E0D6;
+  --azul-escuro: #262aa5;
+  --azul-claro: #3fc8d5;
+  font-family: 'Barlow', sans-serif;
+  height: 4000px;
+}
+
+input[type=checkbox] {
+  border: 2px solid var(--azul-claro);
+  box-shadow: none;
+}
+
+input[type=checkbox]:checked,
+input[type="checkbox"]:focus {
+  background-color: var(--azul-claro);
+  border-color: var(--azul-claro);
+  box-shadow: none;
+  outline: none;
+}
+
+.banner-l{
+  background-image: url(../img/banner-1.png);
+}
+
+.banners{
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.banners-titulo{
+  --bs-bg-opacity: .2;
+}
+
+.banner-2{
+  background-image: url(../img/banner-2.png);
+}
+
+.banner-3{
+  background-image: url(../img/banner-3.png);
+}
+
+.botao-padrao{
+  background: var(--azul-claro);
+  color: black;
+}
+
+.botao-padrao:hover {
+  background: var(--azul-escuro);
+}
+
+.input-range::-webkit-slider-thumb{
+  background-color: var(--azul-claro);
+}
+
+[data-bs-theme="dark"]{
+  color: white;
+
+  .nav-link, .card-body, .offcanvas, .accordion, .btn{
+    --bs-nav-link-color: white;
+    --bs-card-color: white;
+    --bs-offcanvas-color: white;
+    --bs-accordion-color: white;
+    --bs-btn-color: white;
+  }
+
+}
+
+footer{
+  background: var(--azul-claro);
+}
+
+.team{
+    width: 100%;
+    height: 90vh;
+    background-image: url(image/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.team h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+
+.team h1 span{
+    color: #fa3131;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.team h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fa3131;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.team .team_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.team .team_box .profile{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.team .team_box .profile img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+    top: 60%;
+}
+
+.team .team_box .profile .info .name{
+    color: #fa3131;
+    margin-bottom: 15px;
+}
+
+.team .team_box .profile .info .bio{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.team .team_box .profile .info .team_icon i{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team .team_box .profile .info .team_icon i:hover{
+    color: #fa3131;
+}
