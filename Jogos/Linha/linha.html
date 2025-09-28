@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="linha.css">
+  <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+  <title>Linha do Tempo — Jogo</title>
+</head>
+<body>
+  <div class="app" role="application">
+    <header>
+      <div>
+        <h1>Linha do Tempo — Tecnologia</h1>
+        <div class="small">Clique nos eventos na ordem cronológica (do mais antigo para o mais recente).</div>
+      </div>
+      <div class="topbar">
+        <div class="progress-wrap" title="Progresso geral">
+          <div class="progress" id="globalProgress"></div>
+        </div>
+        <div class="badge" id="roundInfo">Rodada 1</div>
+      </div>
+    </header>
+
+    <div class="stage">
+      <div class="left">
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <strong>Eventos disponíveis</strong>
+            <div class="small">Clique para colocar na linha</div>
+          </div>
+
+          <div class="chips" id="chipsArea" aria-live="polite"></div>
+
+          <div class="meta">Dica: Você pode desfazer clicando na caixa preenchida.</div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <strong>Monte a linha do tempo</strong>
+          <div class="slots" id="slotsArea"></div>
+
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <button class="btn" id="checkBtn">Verificar</button>
+            <button class="btn ghost" id="undoBtn">Limpar</button>
+            <button class="btn secondary" id="nextBtn">Próxima rodada</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="card">
+          <strong>Progresso da rodada</strong>
+          <div class="meta" id="roundProgressText">Acertos: 0 / 0</div>
+          <div style="height:10px;background:rgba(255,255,255,0.03);border-radius:999px;margin-top:8px;overflow:hidden">
+            <div id="roundProgressBar" style="height:100%;width:0%;background:linear-gradient(90deg,#a78bfa,#60a5fa)"></div>
+          </div>
+          <div class="meta" style="margin-top:10px" id="messageArea">Boa sorte!</div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <strong>Configurações</strong>
+          <div style="margin-top:8px">
+            <label class="small">Eventos por rodada: <span id="numEventsLabel">4</span></label>
+            <input type="range" id="numEvents" min="3" max="6" value="4" />
+            <div class="small" style="margin-top:8px">Cada acerto aumenta a barra de progresso global proporcionalmente.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="small">Feito com ♥ — arrume a ordem cronológica correta :)</div>
+      <div class="small">Pontuação total: <strong id="score">0</strong></div>
+    </footer>
+  </div>
+
+  <script src="linha.js"></script>
+</body>
+</html>
